@@ -50,6 +50,13 @@ trackByFn(){}
       }
   });
   }
+  imprimir(peliculas_id: number) {
+    // Asumiendo que tu backend está en localhost:3000
+    const url = `http://localhost/EvaluacionParcial2/MVC/reports/pelicula.report.php?id=${peliculas_id}`;
+    
+    // Abre una nueva ventana con el reporte PDF
+    window.open(url, '_blank');
+  }
 }
 
 

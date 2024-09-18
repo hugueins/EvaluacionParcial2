@@ -37,16 +37,7 @@ export class DefaultComponent {
   recentOrder = tableData;
 
   AnalyticEcommerce = [
-    {
-      /*title: 'Total Page Views',
-      amount: '4,42,236',
-      background: 'bg-light-primary ',
-      border: 'border-primary',
-      icon: 'rise',
-      percentage: '59.3%',
-      color: 'text-primary',
-      number: '35,000'*/
-    },
+  
     {
       title: 'Total Users',
       amount: '78,250',

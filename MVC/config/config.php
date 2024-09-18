@@ -5,7 +5,7 @@ class ClaseConectar
     protected $db;
     private $host = "localhost";
     private $usuario = "root";
-    private $pass = "123456789";
+    private $pass = "";
     private $base = "pelis";
     public function ProcedimientoParaConectar()
     {

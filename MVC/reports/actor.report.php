@@ -1,9 +1,12 @@
 <?php
 // Definimos la ruta base del proyecto
-define('BASE_PATH', 'C:/xampp/htdocs/EvaluacionParcial2/MVC');
+//define('BASE_PATH', 'C:/xampp/htdocs/EvaluacionParcial2/MVC'); path pc casa
+define('BASE_PATH', 'C:/wamp64/www/EvaluacionParcial2/MVC'); //path pc oficina
+
 
 // Incluimos la biblioteca FPDF
 require(BASE_PATH . '/reports/fpdf/fpdf.php');
+require(BASE_PATH . '/reports/fpdf/fpdf_utf8.php');
 
 // Incluimos el modelo de actores
 require_once(BASE_PATH . "/models/actores.models.php");
