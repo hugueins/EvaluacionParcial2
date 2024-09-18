@@ -4,11 +4,11 @@
 define('BASE_PATH', 'C:/wamp64/www/EvaluacionParcial2/MVC'); //path pc oficina
 
 
-// Incluimos la biblioteca FPDF
+
 require(BASE_PATH . '/reports/fpdf/fpdf.php');
 require(BASE_PATH . '/reports/fpdf/fpdf_utf8.php');
 
-// Incluimos el modelo de actores
+
 require_once(BASE_PATH . "/models/actores.models.php");
 
 class ActorPDF extends FPDF
@@ -16,7 +16,7 @@ class ActorPDF extends FPDF
     function Header()
     {
         $this->SetFont('Arial', 'B', 15);
-        $this->Cell(0, 10, 'REPORTE DE ACTOR', 0, 1, 'C');
+        $this->Cell(0, 10, 'REPORTE DE ACTOR - Evaluación Parcial 2 6to Software', 0, 1, 'C');
         $this->SetFont('Arial', '', 10);
         $this->Cell(0, 5, utf8_decode('Generado el: ' . date('Y-m-d H:i:s')), 0, 1, 'C');
         $this->Ln(10);
@@ -30,7 +30,7 @@ class ActorPDF extends FPDF
     }
 }
 
-// Obtenemos el ID del actor de la URL
+//  ID del actor de la URL del front 
 $actor_id = isset($_GET['id']) ? intval($_GET['id']) : 0;
 
 if ($actor_id <= 0) {

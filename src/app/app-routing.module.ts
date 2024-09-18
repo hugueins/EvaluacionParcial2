@@ -77,7 +77,7 @@ const routes: Routes = [
       },
       
       {
-        path: 'editarrol',
+        path: 'editarrol:/rol_id',
         loadComponent: () => import('./components/rol/nuevorol/nuevorol.component').then((m)=>m.NuevorolComponent)
       },
     ]

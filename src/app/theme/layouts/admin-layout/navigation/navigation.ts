@@ -43,14 +43,14 @@ export const NavigationItems: NavigationItem[] = [
     icon: 'icon-navigation',
     children: [
     
-      {
+      /*{
         id: 'rol',
         title: 'Roles',
         type: 'item',
         classes: 'nav-item',
         url: '/rol',
         icon: 'ant-design'
-      },
+      },*/
     ]
   },
   {
@@ -60,7 +60,7 @@ export const NavigationItems: NavigationItem[] = [
     icon: 'icon-navigation',
     children: [
       
-      {
+     /* {
         id: 'usuarios',
         title: 'Usuarios',
         type: 'item',
@@ -69,7 +69,7 @@ export const NavigationItems: NavigationItem[] = [
         icon: 'ant-design',
         target: true,
         external: true
-      },
+      },*/
       {
         id: 'actores',
         title: 'Actores',
@@ -87,7 +87,7 @@ export const NavigationItems: NavigationItem[] = [
         icon: 'ant-design',
         target: true,
         external: true
-      },
+      },/*
       {
         id: 'valoracion',
         title: 'Valoracion',
@@ -97,7 +97,7 @@ export const NavigationItems: NavigationItem[] = [
         icon: 'ant-design',
         target: true,
         external: true
-      }
+      }*/
     ]
   },
 

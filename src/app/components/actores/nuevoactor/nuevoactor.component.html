@@ -1,38 +1,35 @@
 <div class="card my-5">
   <div class="card-body">
     <div class="d-flex justify-content-between align-items-end mb-4">
-      <h3 class="mb-0">
-          {{titulo}} 
-          <!-- Interpolacion 
-           envia variable desde ts hacia html
-           -->
-      </h3>
+      <h3 class="mb-0">{{titulo}}</h3>
     </div>
-    <div class="row">
-       <div class="form-group mb-3">
-         <label class="form-label" for="Nombre">Nombre del Actor</label>
-         <input type="text" class="form-control" [value]="nombre" [(ngModel)] = "nombre" placeholder="Nombre" />
+    <form (ngSubmit)="grabar()" #actorForm="ngForm">
+      <div class="row">
+        <div class="form-group mb-3">
+          <label class="form-label" for="nombre">Nombre del Actor</label>
+          <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="nombre" required placeholder="Nombre" />
         </div>
         <div class="form-group mb-3">
           <label class="form-label" for="apellido">Apellido del Actor</label>
-          <input type="text" class="form-control" [value]="apellido" [(ngModel)] = "apellido" placeholder="Apellido" />
-         </div>
-        <div class="form-group mb-3">
-        <label class="form-label" for="fecha_nacimiento">Fecha de Nacimiento</label>
-        <input type="date" class="form-control" id="fecha_nacimiento" placeholder="fecha_nacimiento" value="Fecha de Nacimiento" />
-              </div>
-              <div class="form-group mb-3">
-                <label class="form-label" for="nacionalidad">Nacionalidad del Actor</label>
-                <input type="text" class="form-control" [value]="nacionalidad" [(ngModel)] = "nacionalidad" placeholder="Nacionalidad del Actor" />
-               </div>
-              <div class="d-grid mt-4">
-              <button type="button" (click)="grabar()" class="btn btn-primary">Agregar Nuevo Actor </button>
-            </div>
-           
-            
-          </div>
+          <input type="text" class="form-control" id="apellido" name="apellido" [(ngModel)]="apellido" required placeholder="Apellido" />
         </div>
+        <div class="form-group mb-3">
+          <label class="form-label" for="fecha_nacimiento">Fecha de Nacimiento</label>
+          <input type="date" class="form-control" id="fecha_nacimiento" name="fecha_nacimiento" [(ngModel)]="fecha_nacimiento" required />
+        </div>
+        <div class="form-group mb-3">
+          <label class="form-label" for="nacionalidad">Nacionalidad del Actor</label>
+          <input type="text" class="form-control" id="nacionalidad" name="nacionalidad" [(ngModel)]="nacionalidad" required placeholder="Nacionalidad del Actor" />
+        </div>
+        <div class="d-grid mt-4">
+          <button type="submit" class="btn btn-primary" [disabled]="!actorForm.form.valid">
+            {{ actor_id === 0 ? 'Agregar Nuevo Actor' : 'Actualizar Actor' }}
+          </button>
+        </div>
+        <div class="d-grid mt-2">
+          <button type="button" (click)="limpiarCampos()" class="btn btn-secondary">Limpiar Campos</button>
+        </div>
+      </div>
+    </form>
   </div>
-
-     
-  
+</div>

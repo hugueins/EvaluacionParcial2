@@ -1,11 +1,11 @@
 <?php
-// Definimos la ruta base del proyecto
+
 define('BASE_PATH', 'C:/xampp/htdocs/EvaluacionParcial2/MVC');
 
-// Incluimos la biblioteca FPDF
+
 require(BASE_PATH . '/reports/fpdf/fpdf.php');
 
-// Incluimos el modelo de películas
+
 require_once(BASE_PATH . "/models/peliculas.models.php");
 
 class PeliculaPDF extends FPDF
@@ -13,7 +13,7 @@ class PeliculaPDF extends FPDF
     function Header()
     {
         $this->SetFont('Arial', 'B', 15);
-        $this->Cell(0, 10, 'REPORTE DE PELICULA', 0, 1, 'C');
+        $this->Cell(0, 10, 'REPORTE DE PELICULA - Evaluación Parcial 2 6to Software', 0, 1, 'C');
         $this->SetFont('Arial', '', 10);
         $this->Cell(0, 5, utf8_decode('Generado el: ' . date('Y-m-d H:i:s')), 0, 1, 'C');
         $this->Ln(10);
@@ -27,7 +27,7 @@ class PeliculaPDF extends FPDF
     }
 }
 
-// Obtenemos el ID de la película de la URL
+//  ID de la película de la URL DESDE EL FRONT
 $peliculas_id = isset($_GET['id']) ? intval($_GET['id']) : 0;
 
 if ($peliculas_id <= 0) {
