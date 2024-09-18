@@ -47,7 +47,7 @@ const routes: Routes = [
       },
       
       {
-        path: 'editaractor',
+        path: 'editaractor/:actor_id',
         loadComponent: () => import('./components/actores/nuevoactor/nuevoactor.component').then((m)=>m.NuevoactorComponent)
       },
       {
@@ -59,7 +59,7 @@ const routes: Routes = [
         loadComponent: () => import('./components/peliculas/nuevapelicula/nuevapelicula.component').then((m)=>m.NuevapeliculaComponent)
       },
       {
-        path: 'editarpeliculas',
+        path: 'editarpeliculas/:peliculas_id',
         loadComponent: () => import('./components/peliculas/nuevapelicula/nuevapelicula.component').then((m)=>m.NuevapeliculaComponent)
       },
       {

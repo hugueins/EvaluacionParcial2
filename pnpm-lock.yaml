@@ -65,6 +65,9 @@ importers:
       rxjs:
         specifier: ~7.8.1
         version: 7.8.1
+      sweetalert2:
+        specifier: ^11.14.0
+        version: 11.14.0
       tslib:
         specifier: ^2.6.3
         version: 2.7.0
@@ -4614,6 +4617,9 @@ packages:
   svg.select.js@3.0.1:
     resolution: {integrity: sha512-h5IS/hKkuVCbKSieR9uQCj9w+zLHoPh+ce19bBYyqF53g6mnPB8sAtIbe1s9dh2S2fCmYX2xel1Ln3PJBbK4kw==}
     engines: {node: '>= 0.8.0'}
+
+  sweetalert2@11.14.0:
+    resolution: {integrity: sha512-kF1Q/+GtZZXr+rYVcBNwlEsnxP089CpDbck+MYjvLaQj9x4fzHqN9UhlkHOIR0k09LVu2sx8cU9BnvRlxWIZqg==}
 
   symbol-observable@4.0.0:
     resolution: {integrity: sha512-b19dMThMV4HVFynSAM1++gBHAbk2Tc/osgLIBZMKsyqh34jb2e8Os7T6ZW/Bt3pJFdBTd2JwAnAAEQV7rSNvcQ==}
@@ -10003,6 +10009,8 @@ snapshots:
   svg.select.js@3.0.1:
     dependencies:
       svg.js: 2.7.1
+
+  sweetalert2@11.14.0: {}
 
   symbol-observable@4.0.0: {}
 

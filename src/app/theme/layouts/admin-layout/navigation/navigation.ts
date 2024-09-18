@@ -78,38 +78,13 @@ export const NavigationItems: NavigationItem[] = [
     type: 'group',
     icon: 'icon-navigation',
     children: [
-      {
-        id: 'productos',
-        title: 'Productos',
-        type: 'item',
-        classes: 'nav-item',
-        url: '/productos',
-        icon: 'ant-design'
-      },
-      {
-        id: 'proveedores',
-        title: 'Proveedores',
-        type: 'item',
-        classes: 'nav-item',
-        url: '/proveedores',
-        icon: 'ant-design'
-      },
+      
       {
         id: 'usuarios',
         title: 'Usuarios',
         type: 'item',
         classes: 'nav-item',
         url: '/usuarios',
-        icon: 'ant-design',
-        target: true,
-        external: true
-      },
-      {
-        id: 'facturas',
-        title: 'Facturas',
-        type: 'item',
-        classes: 'nav-item',
-        url: '/facturas',
         icon: 'ant-design',
         target: true,
         external: true
@@ -128,16 +103,6 @@ export const NavigationItems: NavigationItem[] = [
         type: 'item',
         classes: 'nav-item',
         url: '/peliculas',
-        icon: 'ant-design',
-        target: true,
-        external: true
-      },
-      {
-        id: 'facturas',
-        title: 'Facturas',
-        type: 'item',
-        classes: 'nav-item',
-        url: '/facturas',
         icon: 'ant-design',
         target: true,
         external: true

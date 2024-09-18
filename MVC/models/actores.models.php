@@ -43,8 +43,8 @@ class Actores
     $con = new ClaseConectar();
     $con =$con->ProcedimientoParaConectar();
     $cadena = "UPDATE `actores` SET `nombre`='$nombre',`apellido`='$apellido',`fecha_nacimiento`='$fecha_nacimiento',`nacionalidad`='$nacionalidad' WHERE `actor_id` = $actor_id";
-    echo $cadena;
-    die;
+   // echo $cadena;
+    //die;
     if (mysqli_query($con, $cadena)){
         return $con->insert_id;
     } else {

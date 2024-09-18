@@ -1,38 +1,53 @@
-<div class="auth-main">
-    <div class="auth-wrapper v3">
-      <div class="auth-form">
-        <div class="auth-header">
-          <a href="javascript:"><img src="assets/images/logo-dark.svg" alt="logo" /></a>
-        </div>
-        <div class="card my-5">
-          <div class="card-body">
-            
-            <div class="form-group mb-3">
-              <label class="form-label" for="Titulo">Titulo</label>
-              <input type="text" class="form-control" id="Titulo" placeholder="Titulo" value="Titulo Pelicula" />
-            </div>
-            <div class="form-group mb-3">
-                <label class="form-label" for="Genero">Genero</label>
-                <input type="text" class="form-control" id="Genero" placeholder="Genero" value="Genero Pelicula" />
-              </div>
-              <div class="form-group mb-3">
-                <label class="form-label" for="anio">Año Estreno</label>
-                <input type="date" class="form-control" id="anio" placeholder="anio" value="Año de Estreno" />
-              </div>
-            <div class="form-group mb-3">
-              <label class="form-label" for="Director">Director</label>
-              <input type="text" class="form-control" id="Director" placeholder="Director" value="Director " />
-            </div>
-            
-          
-            <div class="d-grid mt-4">
-              <button type="button" class="btn btn-primary">Agregar Nueva Pelicula </button>
-            </div>
-           
-            
+<div class="card my-5">
+  <div class="card-body">
+    <div class="d-flex justify-content-between align-items-end mb-4">
+      <h3 class="mb-0">
+        {{ titulo }}
+       
+      </h3>
+    </div>
+    <form [formGroup]="frm_peliculas" (ngSubmit)="grabar()">
+      <div class="row">
+        <div class="form-group mb-3">
+          <label class="form-label" for="titulo">Titulo de la Pelicula </label>
+          <input formControlName="titulo"type="text"class="form-control" id="titulo" placeholder="Ingrese el ttulo"/>
+          <div *ngIf="frm_peliculas.get('titulo').invalid && frm_peliculas.get('titulo').touched">
+            <small *ngIf="frm_peliculas.get('titulo').hasError('required')" style="color: red">
+              El titulo es requerido
+            </small>
           </div>
         </div>
-       
-      </div>
-    </div>
-  </div>
+        <div class="form-group mb-3">
+          <label class="form-label" for="titulo">Genero de la Pelicula </label>
+          <input formControlName="genero"type="text"class="form-control" id="genero" placeholder="Ingrese el Genero"/>
+          <div *ngIf="frm_peliculas.get('genero').invalid && frm_peliculas.get('genero').touched">
+            <small *ngIf="frm_peliculas.get('genero').hasError('required')" style="color: red">
+              El genero es requerido
+            </small>
+          </div>
+        </div>
+        <div class="form-group mb-3">
+          <label class="form-label" for="anio">Año de la Pelicula </label>
+          <input formControlName="anio"type="text"class="form-control" id="anio" placeholder="Ingrese el Año de Estreno"/>
+          <div *ngIf="frm_peliculas.get('anio').invalid && frm_peliculas.get('anio').touched">
+            <small *ngIf="frm_peliculas.get('anio').hasError('required')" style="color: red">
+              El año es requerido
+            </small>
+          </div>
+        </div>
+        <div class="form-group mb-3">
+          <label class="form-label" for="director">Director de la Pelicula</label>
+          <input formControlName="director"type="text"class="form-control" id="director" placeholder="Ingrese el Nombre del Director de la Pelicula"/>
+          <div *ngIf="frm_peliculas.get('anio').invalid && frm_peliculas.get('director').touched">
+            <small *ngIf="frm_peliculas.get('director').hasError('required')" style="color: red">
+              El director es requerido
+            </small>
+          </div>
+        
+          <div class="d-grid mt-3">
+            <button type="submit" class="btn btn-primary" [disabled]="frm_peliculas.invalid">Grabar</button>
+          </div>
+        </div>
+      
+    
+ 
