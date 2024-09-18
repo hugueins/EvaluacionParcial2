@@ -5,7 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 // Project import
 import { AdminComponent } from './theme/layouts/admin-layout/admin-layout.component';
 import { GuestComponent } from './theme/layouts/guest/guest.component';
-import { ProductosComponent } from './components/productos/productos.component'; 
+
 
 
 const routes: Routes = [
@@ -22,15 +22,7 @@ const routes: Routes = [
         path: 'dashboard/default',
         loadComponent: () => import('./demo/default/dashboard/dashboard.component').then((c) => c.DefaultComponent)
       },
-      {
-        path: 'productos',
-        loadComponent: () => import('./components/productos/productos.component').then((m)=>m.ProductosComponent)
-      },
-      {
-        path: 'proveedores',
-        loadComponent: () => import('./components/proveedores/proveedores.component').then((m)=>m.ProveedoresComponent)
-      },
-      {
+       {
         path: 'usuarios',
         loadComponent: () => import('./components/usuarios/usuarios.component').then((m)=>m.UsuariosComponent)
       },
@@ -43,20 +35,7 @@ const routes: Routes = [
         path: 'editarsuario',
         loadComponent: () => import('./components/usuarios/nuevousuario/nuevousuario.component').then((m)=>m.NuevousuarioComponent)
       },
-      {
-        path: 'factura',
-        loadComponent: () => import('./components/factura/factura.component').then((m)=>m.FacturaComponent)
-      },
-      
-      {
-        path: 'nuevafactura',
-        loadComponent: () => import('./components/factura/nuevafactura/nuevafactura.component').then((m)=>m.NuevafacturaComponent)
-      },
-      
-      {
-        path: 'editarfactura',
-        loadComponent: () => import('./components/factura/nuevafactura/nuevafactura.component').then((m)=>m.NuevafacturaComponent)
-      },
+     
       {
         path: 'actores',
         loadComponent: () => import('./components/actores/actores.component').then((m)=>m.ActoresComponent)

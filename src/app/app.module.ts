@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { SharedModule } from './theme/shared/shared.module';
 import { HttpClient, provideHttpClient } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CommonModule } from '@angular/common';
@@ -22,7 +23,7 @@ import { provideRouter } from '@angular/router';
     BrowserAnimationsModule, 
     FormsModule,
     ReactiveFormsModule,
-    NgbModule ],
+    NgbModule, HttpClientModule ],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
