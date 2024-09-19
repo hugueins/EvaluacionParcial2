@@ -1,5 +1,5 @@
 <?php
-// Definimos la ruta base del proyecto
+
 //define('BASE_PATH', 'C:/xampp/htdocs/EvaluacionParcial2/MVC'); path pc casa
 define('BASE_PATH', 'C:/wamp64/www/EvaluacionParcial2/MVC'); //path pc oficina
 
@@ -15,10 +15,19 @@ class ActorPDF extends FPDF
 {
     function Header()
     {
+        $this->Image('https://www.uniandes.edu.ec/wp-content/uploads/2024/07/2-headerweb-home-2.png', 10, 10, 190);
+        
+        
+        $this->Cell(80);
         $this->SetFont('Arial', 'B', 15);
-        $this->Cell(0, 10, 'REPORTE DE ACTOR - Evaluación Parcial 2 6to Software', 0, 1, 'C');
+        $this->Cell(0, 10, 'REPORTE DE PELICULAS Y ACTORES - Evaluacion Parcial 2 6to Software', 0, 1, 'C');
         $this->SetFont('Arial', '', 10);
-        $this->Cell(0, 5, utf8_decode('Generado el: ' . date('Y-m-d H:i:s')), 0, 1, 'C');
+        
+     
+        date_default_timezone_set('America/Guayaquil');
+        $fecha_hora = date('Y-m-d H:i:s');
+        
+        $this->Cell(0, 5, utf8_decode('Generado el: ' . $fecha_hora . ' (UTC-5)'), 0, 1, 'C');
         $this->Ln(10);
     }
 
